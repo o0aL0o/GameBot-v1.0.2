@@ -7,4 +7,4 @@
 ## 9/9/2021
 - build a simple discord bot
 - setup a database
-- two commands: balance.js and beg.js 
+- two commands: balance.js and dailycoins.js 
