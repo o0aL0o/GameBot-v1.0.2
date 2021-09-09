@@ -1,5 +1,5 @@
 ### GameBot-v1.0.0
-##a discord bot with mini game
+## a discord bot with mini game
 
 <br />
 
