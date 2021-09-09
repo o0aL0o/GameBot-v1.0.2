@@ -3,7 +3,7 @@
 
 <br />
 
-### Change log
+### Changelog
 ## 9/9/2021
 -build a simple discord bot
 -setup a database
