@@ -3,9 +3,9 @@ module.exports = {
     name: "dailycoins",
     aliases: ["dlc"],
     cooldown: 7200,
-    permissions:["SPEAK"],
+    permissions: ["SPEAK"],
     description: "beg for coins",
-    async execute(client, message, cmd, args, Discord, profileData){
+    async execute(client, message, cmd, args, Discord, profileData) {
         const randomNumber = Math.floor(Math.random() * 500) + 1;
         const response = await profileModel.findOneAndUpdate({
             userID: message.author.id,
@@ -14,6 +14,10 @@ module.exports = {
                 coins: randomNumber,
             },
         });
-        return message.channel.send(`${message.author.username}, you bagged and received ${randomNumber} **coins**`)
+        const embed = new Discord.MessageEmbed()
+            .setColor("#ffa3e5")
+            .setAuthor(message.author.tag, message.author.displayAvatarURL({ dyname: true }))
+            .setDescription(`You got ${randomNumber}, now you have ${profileData.coins + randomNumber}`);
+        message.channel.send({ embeds: [embed] })
     }
 }
