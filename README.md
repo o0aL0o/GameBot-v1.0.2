@@ -8,3 +8,6 @@
 - build a simple discord bot
 - setup a database
 - two commands: balance.js and dailycoins.js 
+## 10/9/2021
+- Change balance.js and dailycoins.js UI
+- add command help.js
