@@ -1,9 +1,18 @@
+const { contains } = require("cheerio")
+
 module.exports = {
     name: "balance",
     aliases: ["bal", "bl"],
-    permissions:["SPEAK"],
+    permissions: ["SPEAK"],
     description: "Check your balance",
-    execute(client, message, cmd, args, Discord, profileData){
-        message.channel.send(`your wellet balance is ${profileData.coins}, your bank balance is ${profileData.bank}`);
+    execute(client, message, cmd, args, Discord, profileData) {
+        const embed = new Discord.MessageEmbed()
+            .setColor("#ffa3e5")
+            .setAuthor(message.author.tag, message.author.displayAvatarURL({ dyname: true }))
+            .addFields(
+                { name: "`conins: `", value: `${profileData.coins}` },
+                { name: "`bank: `", value: `${profileData.bank}` }
+            )
+        message.channel.send({ embeds: [embed] })
     }
 }
