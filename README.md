@@ -10,4 +10,4 @@
 - two commands: balance.js and dailycoins.js 
 ## 10/9/2021
 - Change balance.js and dailycoins.js UI
-- add command help.js
+- add command help.js deposit.js and withdraw.js
