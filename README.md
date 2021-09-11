@@ -1,4 +1,4 @@
-### GameBot-v1.0.0
+### GameBot-v1.0.2
 ## a discord bot with mini game
 
 <br />
